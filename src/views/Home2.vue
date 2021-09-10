@@ -24,7 +24,7 @@ export default {
   },
 
   mounted() {
-    this.importAll(require.context("@/assets/en2/", true, /^.*\.wav$/));
+    this.importAll(require.context("@/assets/en/", true, /^.*\.wav$/));
   },
 
   methods: {
@@ -44,19 +44,19 @@ export default {
       }
     },
     getFactionName(path) {
-      // ./orc/wc3sfx-creeps-ogre/OgreYes4.wav -> Orc
+      // ./creeps/wc3sfx-creeps-ogre/OgreYes4.wav -> Creeps
       const regex = RegExp("/(.*?)/");
       const match = regex.exec(path)[1];
       return match.charAt(0).toUpperCase() + match.slice(1);
     },
     getUnitName(path) {
-      // ./orc/wc3sfx-creeps-ogre/OgreYes4.wav -> Ogre
+      // ./creeps/wc3sfx-creeps-ogre/OgreYes4.wav -> Ogre
       const regex = RegExp("-.+-(.*)/");
       const match = regex.exec(path)[1];
       return match.charAt(0).toUpperCase() + match.slice(1);
     },
     getSoundName(path) {
-      // ./orc/wc3sfx-creeps-ogre/OgreYes4.wav -> OgreYes4
+      // ./creeps/wc3sfx-creeps-ogre/OgreYes4.wav -> OgreYes4
       const regex = RegExp(".+/(.*)\\.");
       const match = regex.exec(path)[1];
       return match;

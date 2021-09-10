@@ -35,13 +35,13 @@ export default {
       }
     },
     getUnitName(path) {
-      // ./wc3sfx-creeps-ogre/OgreYes4.wav -> Ogre
+      // ./creeps/wc3sfx-creeps-ogre/OgreYes4.wav -> Ogre
       const regex = RegExp("-.+-(.*)/");
       const match = regex.exec(path)[1];
       return match.charAt(0).toUpperCase() + match.slice(1);
     },
     getSoundName(path) {
-      // ./wc3sfx-creeps-ogre/OgreYes4.wav -> OgreYes4
+      // ./creeps/wc3sfx-creeps-ogre/OgreYes4.wav -> OgreYes4
       const regex = RegExp(".+/(.*)\\.");
       const match = regex.exec(path)[1];
       return match;
