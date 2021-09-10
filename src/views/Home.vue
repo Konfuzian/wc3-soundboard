@@ -1,9 +1,9 @@
 <template lang="html">
-  <div style="height: 100px">
+  <div class="container">
     <div v-for="(sounds, unit) in sounds" :key="unit" >
-      {{ unit }}
+      <h2>{{ unit }}</h2>
       <div v-for="(src, sound) in sounds" :key="sound">
-        {{ sound }}
+        {{ sound }}<br />
         <audio controls>
           <source :src="src" type="audio/wav">
         </audio>
@@ -13,6 +13,7 @@
 </template>
 
 <script>
+
 export default {
   data() {
     return {
@@ -49,3 +50,22 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+audio {
+  width: 100px;
+  height: 30px;
+  margin-top: 2px;
+  margin-bottom: 6px;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(200, 200px);
+}
+
+h2 {
+  font-size: 1.75em;
+  font-weight: 100;
+}
+</style>
