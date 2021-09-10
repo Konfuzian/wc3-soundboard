@@ -79,11 +79,13 @@ audio {
 }
 
 h2 {
+  color: #ffffff;
   font-size: 1.75em;
   font-weight: 100;
 }
 
 h3 {
+  color: #ffffff;
   font-size: 1.3em;
   font-weight: 100;
 }

@@ -10,7 +10,7 @@ const routes = [
   },
   {
     path: '/en2',
-    name: 'Home',
+    name: 'Home2',
     component: Home2
   },
   // {

@@ -59,8 +59,7 @@ audio {
 }
 
 .container {
-  display: grid;
-  grid-template-columns: repeat(200, 200px);
+  display: flex;
 }
 
 h2 {
