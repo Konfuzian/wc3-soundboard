@@ -4,7 +4,7 @@ import Home2 from '../views/Home2.vue'
 
 const routes = [
   {
-    path: '/en',
+    path: '/',
     name: 'Home',
     component: Home
   },
